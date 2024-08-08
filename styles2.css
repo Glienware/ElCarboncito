@@ -1,0 +1,165 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #343a40;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #495057;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #495057;
+    background-color: #f8f9fa;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #7F62D5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6d4fcc;
+}
+
+.bottom-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #6951B0;
+    padding: 12px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-menu button {
+    flex: 1;
+    padding: 12px;
+    background-color: #6951B0;
+    color: white;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.bottom-menu button:hover {
+    background-color: #5e479e;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+}
+
+.section {
+    margin-top: 70px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.table-container {
+    margin-top: 25px;
+    overflow-x: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    padding-bottom: 60px;
+}
+
+.table-container.fixed {
+    position: fixed;
+    top: 60px; /* Ajusta la posición superior según la altura de tu menú */
+    width: calc(100% - 40px); /* Asegura que el ancho no exceda el contenedor */
+    z-index: 999; /* Asegura que la tabla fija quede por encima de otros elementos */
+    max-height: calc(100vh - 120px); /* Ajusta la altura máxima en función de la altura de la ventana y otros elementos */
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido es más grande que el contenedor */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Mantiene las columnas con un ancho fijo */
+}
+
+table, th, td {
+    border: 1px solid #dee2e6;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: #343a40;
+}
+
+th {
+    background-color: #f2f2f2;
+    position: sticky; /* Mantiene la cabecera de la tabla fija al hacer scroll */
+    top: 0;
+    z-index: 10;
+}
+
+/* Estilos para asegurar que la sección "Gastos" no se deforme */
+.section.gastos {
+    min-height: 400px; /* Asegura una altura mínima para la sección */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido de forma uniforme */
+}
+
+.section.gastos .table-container {
+    flex-grow: 1; /* Permite que la tabla crezca según sea necesario */
+    max-height: 100%; /* Asegura que la tabla no exceda la altura de la sección */
+    overflow-y: auto;
+}

@@ -1,0 +1,140 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    overflow-y: auto; /* Permite el scroll vertical cuando el contenido excede la altura */
+    flex: 1; /* Permite que el contenedor se expanda para llenar el espacio disponible */
+}
+
+h1, h2 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #555;
+}
+
+input, select {
+    width: calc(100% - 16px);
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    width: calc(100% - 16px);
+    padding: 12px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #5a54e1;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #4b47c0;
+    transform: translateY(0);
+}
+
+.bottom-menu {
+    position: fixed;
+    bottom: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #6c63ff;
+    padding: 12px 0;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+    border-top: 1px solid #5a54e1;
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+.bottom-menu button {
+    flex: 1;
+    padding: 12px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.bottom-menu button:hover {
+    background-color: #5a54e1;
+    transform: translateY(-2px);
+}
+
+.bottom-menu button:active {
+    background-color: #4b47c0;
+    transform: translateY(0);
+}
+
+.bottom-menu button:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.bottom-menu button:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.section {
+    display: none;
+}
+
+.section p, .section span {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #dcdcdc;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+#reporte {
+    display: none;
+}
